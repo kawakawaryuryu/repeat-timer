@@ -30,6 +30,7 @@ function App() {
         const elapsedSeconds = Math.round((now.getTime() - baseDateTime.getTime())/1000);
         const remainingCount = timeInterval - elapsedSeconds;
         if (remainingCount <= 0) {
+          playBell();
           setCount(timeInterval);
           countOfTimes = countOfTimes + 1;
           baseDateTime = new Date();
@@ -68,15 +69,21 @@ function App() {
         <div>{count}</div>
       </div>
       <div className="input">
-        <label>how many times</label>
-        <input type="number" onChange={changeNumberOfTimes} />
-      </div>
-      <div className="input">
         <label>interval</label>
         <input type="number" onChange={changeInterval} />
       </div>
+      <div className="input">
+        <label>how many times</label>
+        <input type="number" onChange={changeNumberOfTimes} />
+      </div>
     </div>
   );
+}
+
+function playBell() {
+  const audio = new Audio('bell.mp3');
+  audio.load();
+  audio.play();
 }
 
 export default App;
