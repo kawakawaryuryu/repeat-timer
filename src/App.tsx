@@ -52,7 +52,7 @@ function App() {
     <div className="App">
       <div className="timer">
         <button onClick={clickButton}>Start/Stop</button>
-        <div>{count}</div>
+        <div className="count">{count}</div>
       </div>
       <div className="input">
         <label className="label">インターバル</label>
