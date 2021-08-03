@@ -48,4 +48,10 @@
 
 .input {
   margin: 0.5vh;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.label {
+  width: 18vh;
 }

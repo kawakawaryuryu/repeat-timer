@@ -50,31 +50,17 @@ function App() {
 
   return (
     <div className="App">
-      {/*<header className="App-header">*/}
-      {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-      {/*  <p>*/}
-      {/*    Edit <code>src/App.tsx</code> and save to reload.*/}
-      {/*  </p>*/}
-      {/*  <a*/}
-      {/*    className="App-link"*/}
-      {/*    href="https://reactjs.org"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    Learn React*/}
-      {/*  </a>*/}
-      {/*</header>*/}
       <div className="timer">
         <button onClick={clickButton}>Start/Stop</button>
         <div>{count}</div>
       </div>
       <div className="input">
-        <label>interval</label>
-        <input type="number" onChange={changeInterval} />
+        <label className="label">インターバル</label>
+        <input type="number" onChange={changeInterval} />秒
       </div>
       <div className="input">
-        <label>how many times</label>
-        <input type="number" onChange={changeNumberOfTimes} />
+        <label className="label">回数</label>
+        <input type="number" onChange={changeNumberOfTimes} />回
       </div>
     </div>
   );
